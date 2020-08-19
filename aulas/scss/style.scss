@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+
+$tablet-width: 768px;
+$desktop-width: 1026px;
+$desktop-full: 1600px;
+
+// Midias Queries
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop-full {
+    @media (min-width: #{$desktop-full}) {
+        @content;
+    }
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    @include flex-box();
+   
+
+    @include mobile() {
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    @include landscape() {
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    @include tablet() {
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    @include desktop() {
+        flex-direction: row;
+        height: 145vh;
+    }
+
+    @include desktop-full(){
+        max-height: 100vh;
+    }
+
+    .video {
+        flex: 2;
+        background-color: #1c161a;
+
+        color: white;
+
+        @include mobile() {
+            padding: 30px 15px 10px 15px;
+        }
+
+        @include landscape() {
+            padding: 30px 15px 10px 15px;
+        }
+
+        @include tablet() {
+            padding: 30px 50px 10px 50px;
+        }
+
+        @include desktop() {
+            padding: 30px 15px 10px 100px;
+        }
+
+        #video{
+            max-width: 100%;
+            max-height: 600px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .title {
+           margin: 50px 10px 10px 20px;
+
+           span:first-child{
+               color: #0290AA;
+           }
+
+            span:last-child{
+                font: {
+                    size: 35px;
+                    weight: 700;
+                    style: oblique;
+                }
+            }      
+        }
+
+        p:first-child{
+            margin: 50px 10px 10px 20px;
+        }
+
+        footer {
+            // padding-top: 10%;
+        }
+    }
+
+    .chat {
+        overflow: auto;
+        background-color: #313131;
+        padding: 100px 20px 5px 20px;
+        flex: 1;
+
+        h2 {
+            color: white;
+            font: {
+                style: oblique;
+                size: 25px;
+            }
+        }
+
+     
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}

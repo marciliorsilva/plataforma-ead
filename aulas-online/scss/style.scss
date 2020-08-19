@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+
+$tablet-width: 768px;
+$desktop-width: 1026px;
+$desktop-full: 1600px;
+
+// Midias Queries
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop-full {
+    @media (min-width: #{$desktop-full}) {
+        @content;
+    }
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1c161a;
+    height: 100vh;
+}
+
+.voltar {
+    a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid #5db3ff;
+        padding: 0px 20px;
+        @include border-radius(20px);
+
+        &:hover {
+            background-color: #5db3ff;
+        }
+
+        i {
+            font-size: 12px;
+            padding-right: 5px;
+        }
+    }
+
+    @include tablet() {
+        margin: 50px 0 50px 100px;
+    }
+
+    @include mobile() {
+        margin: 50px 0 40px 20px;
+    }
+}
+
+.container {
+    @include flex-box();
+    justify-content: center;
+
+    @include desktop-full() {
+    }
+
+    .video {
+        color: white;
+
+        #video {
+            max-width: 100%;
+        
+            outline: none;
+            cursor: pointer;
+
+            @include desktop(){
+                max-height: 450px;
+            }
+
+            @include desktop-full(){
+                max-height: 600px;
+            }
+        }
+
+        .flex-title {
+            @include flex-box();
+            align-items: center;
+            flex-wrap: wrap;
+
+            margin: 10px 0;
+
+            @include mobile() {
+                justify-content: center;
+            }
+
+            @include tablet() {
+                justify-content: space-between;
+            }
+
+            .title {
+                margin: 0px 10px 10px 20px;
+
+                span:first-child {
+                    color: #0290aa;
+                }
+
+                span:last-child {
+                    font: {
+                        size: 35px;
+                        weight: 700;
+                        style: oblique;
+                    }
+                }
+            }
+
+            button {
+                background-color: #5db3ff;
+                color: white;
+                border: 1px solid transparent;
+                font-size: 15px;
+                @include border-radius(20px);
+                cursor: pointer;
+                @include flex-box();
+                align-items: center;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid white;
+                }
+
+                img {
+                    padding-right: 10px;
+                }
+
+                @include mobile() {
+                    padding: 7px 25px;
+                }
+
+                @include tablet() {
+                    padding: 10px 40px;
+                }
+            }
+        }
+
+        p:first-child {
+            margin: 50px 10px 10px 20px;
+        }
+    }
+}
+
+footer {
+    color: white;
+
+    p {
+        @include mobile() {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @include tablet() {
+            text-align: start;
+        }
+    }
+
+    @include mobile() {
+        padding: 30px 0 0 0;
+    }
+
+    @include tablet() {
+        padding: 50px 0 0 100px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}

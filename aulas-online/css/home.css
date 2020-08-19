@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    text-decoration: none
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1c161a;
+    color: white
+}
+
+header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: 20px 0px
+}
+
+@media screen and (orientation: portrait) {
+    header nav {
+        justify-content: center
+    }
+}
+
+@media (min-width: 768px) {
+    header nav {
+        justify-content: space-between
+    }
+}
+
+header nav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center
+}
+
+@media screen and (orientation: portrait) {
+    header nav div {
+        margin: 0 10px
+    }
+}
+
+@media (min-width: 768px) {
+    header nav div {
+        margin: 0 20px
+    }
+}
+
+header nav div .logout {
+    border: 1px solid #5DB3FF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    padding: 0 25px;
+    cursor: pointer
+}
+
+header nav div .logout:hover {
+    background-color: #5DB3FF
+}
+
+@media screen and (orientation: portrait) {
+    header nav .header-div-1 {
+        margin: 0 0px
+    }
+}
+
+@media (min-width: 768px) {
+    header nav .header-div-1 {
+        margin: 0 20px
+    }
+}
+
+header nav .header-div-1 span {
+    font-size: 14px;
+    color: #FF43AA
+}
+
+header nav .header-div-1 div:first-child {
+    cursor: pointer;
+    border: 2px solid #5DB3FF;
+    padding: 7px 9px;
+    border-radius: 50%
+}
+
+@media screen and (orientation: portrait) {
+    header nav .header-div-1 div:first-child {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    header nav .header-div-1 div:first-child {
+        display: none
+    }
+}
+
+header nav .header-div-1 i {
+    font-size: 22px;
+    color: #5DB3FF
+}
+
+@media screen and (orientation: portrait) {
+    header nav .header-div-2 {
+        display: none
+    }
+}
+
+@media (min-width: 768px) {
+    header nav .header-div-2 {
+        display: flex
+    }
+}
+
+main .paragraph-2 {
+    margin: -50px 10px 30px 10px
+}
+
+@media screen and (orientation: portrait) {
+    main .paragraph-2 {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    main .paragraph-2 {
+        display: none
+    }
+}
+
+main .flex-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    max-width: 600px
+}
+
+@media screen and (orientation: portrait) {
+    main .flex-main {
+        margin: 70px 10px
+    }
+}
+
+@media (min-width: 768px) {
+    main .flex-main {
+        margin: 70px 100px
+    }
+}
+
+main .flex-main img {
+    width: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 20px
+}
+
+main .flex-main .hashtag {
+    color: #5db3ff;
+    font-size: 14px
+}
+
+@media screen and (orientation: portrait) {
+    main .flex-main .paragraph {
+        display: none
+    }
+}
+
+@media (min-width: 768px) {
+    main .flex-main .paragraph {
+        display: block
+    }
+}
+
+main .flex-main .title {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique
+}
+
+@media screen and (orientation: portrait) {
+    .container-lessons {
+        margin: 0 10px 0 10px
+    }
+}
+
+@media (min-width: 768px) {
+    .container-lessons {
+        margin: 0 50px 0 200px
+    }
+}
+
+.container-lessons .accordion {
+    margin-bottom: 1em;
+    max-width: 65em
+}
+
+.container-lessons .accordion>input[type="checkbox"] {
+    position: absolute;
+    left: -100vw
+}
+
+.container-lessons .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.4s ease-in
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content {
+    height: auto;
+    overflow: visible
+}
+
+.container-lessons .accordion label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content {
+    padding: 15px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+@media screen and (orientation: portrait) {
+    .container-lessons .accordion>input[type="checkbox"]:checked~.content {
+        flex-direction: column
+    }
+}
+
+@media (min-width: 1026px) {
+    .container-lessons .accordion>input[type="checkbox"]:checked~.content {
+        flex-direction: row
+    }
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content div {
+    margin: 0 10px;
+    max-width: 100%
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .first-div-content {
+    flex: 1
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .flex-content {
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .flex-content div {
+    margin: 20px 0
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .flex-content a {
+    cursor: pointer;
+    border: 1px solid #5DB3FF;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    padding: 5px 20px 10px 20px
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .flex-content a img.a {
+    vertical-align: top;
+    padding-right: 10px
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.content .flex-content a:hover {
+    background-color: #5DB3FF
+}
+
+.container-lessons .accordion .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em
+}
+
+.container-lessons .accordion .handle label img {
+    margin-right: 10px
+}
+
+.container-lessons .accordion .handle label .date {
+    padding-left: 10px;
+    color: #afafaf;
+    font-size: 13px;
+    font-weight: normal
+}
+
+.container-lessons .accordion .handle label .arrow:before {
+    font-family: "fontawesome";
+    content: "\f078";
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+    float: right;
+    transition: all 0.4s ease-in;
+    color: white;
+    font-weight: normal
+}
+
+.container-lessons .accordion label {
+    color: #5db3ff;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 15px 10px
+}
+
+.container-lessons .accordion label:hover, .container-lessons .accordion label:focus {
+    background: transparent
+}
+
+.container-lessons .accordion>input[type="checkbox"]:checked~.handle label .arrow:before {
+    content: "\f077"
+}
+
+.container-lessons .accordion p:last-child {
+    margin-bottom: 0
+}
+
+.container-lessons *, .container-lessons *:before, .container-lessons *:after {
+    box-sizing: border-box
+}
+
+.container-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 30px 10px;
+    margin-top: 100px;
+    background-color: #ff43aa
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 {
+        flex-direction: column
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+}
+
+@media (min-width: 1026px) {
+    .container-3 {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: none
+    }
+}
+
+.container-3 div {
+    margin: 10px
+}
+
+.container-3 .sub-1 img {
+    max-width: 100%
+}
+
+.container-3 .sub-1 .sub-content-1 {
+    margin-top: -30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-1 .sub-content-1 {
+        flex-direction: column;
+        justify-content: center
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-1 .sub-content-1 {
+        flex-direction: row;
+        justify-content: start
+    }
+}
+
+.container-3 .sub-1 .sub-content-1 .title {
+    color: black;
+    text-align: start;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 15px
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-1 .sub-content-1 .title {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-1 .sub-content-1 .title {
+        display: inline
+    }
+}
+
+.container-3 .sub-1 .sub-content-1 .sub-title {
+    color: black
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-1 .sub-content-1 div:first-child {
+        margin: 5px;
+        display: none
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-1 .sub-content-1 div:first-child {
+        margin: 10px 5px 10px 10px;
+        display: block
+    }
+}
+
+.container-3 .sub-1 .sub-content-1 div:first-child h2 {
+    max-width: 250px;
+    font-style: oblique;
+    font-size: 30px
+}
+
+.container-3 .sub-1 .sub-content-1 div:nth-child(2) p {
+    max-width: 400px
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-1 .sub-content-1 div:nth-child(2) {
+        display: none
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-1 .sub-content-1 div:nth-child(2) {
+        display: block
+    }
+}
+
+.container-3 .sub-1 .sub-content-1 div:last-child {
+    margin-top: 50px
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-1 .sub-content-1 div:last-child {
+        display: block
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-1 .sub-content-1 div:last-child {
+        display: none
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-2 {
+        padding: 5px 10px 10px 10px
+    }
+}
+
+@media (min-width: 1026px) {
+    .container-3 .sub-2 {
+        padding: 45px 10px 10px 10px
+    }
+}
+
+.container-3 .sub-2 span {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-2 span {
+        margin-left: 10px;
+        font-size: 15px;
+        font-style: normal;
+        font-style: oblique
+    }
+}
+
+.container-3 .sub-2 p {
+    margin-left: 10px
+}
+
+@media screen and (orientation: portrait) {
+    .container-3 .sub-2 p {
+        color: black
+    }
+}
+
+@media (min-width: 768px) {
+    .container-3 .sub-2 p {
+        color: white
+    }
+}
+
+@media screen and (orientation: portrait) {
+    footer {
+        font-size: 14px
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 17px
+    }
+}
+
+@media screen and (orientation: portrait) {
+    footer p {
+        text-align: center;
+        margin: 25px 0px
+    }
+}
+
+@media (min-width: 768px) {
+    footer p {
+        text-align: none;
+        margin: 25px 100px
+    }
+}
+
+div.tooltips {
+    position: relative;
+    display: inline;
+    cursor: pointer
+}
+
+div.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #5DB3FF;
+    height: 20px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 17px
+}
+
+div.tooltips span:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #5DB3FF;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent
+}
+
+div:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    top: 30px;
+    left: 50%;
+    margin-left: -76px;
+    z-index: 999
+}
+
+.ytp-cards-button-icon {
+    display: none
+}
+
+.ytp-title-link {
+    display: none !important
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+}
